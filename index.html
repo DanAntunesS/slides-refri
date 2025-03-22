@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Abacate-refrigerante.png" type="image/x-icon">
+    <title>Refri do DEV</title>
+
+</head>
+<body>
+    <main>
+
+        <div class="item active" style= "--background: #ea3d41;">
+            <div class="title">STRAWBERRY</div>
+            <img src="img/Morango-refrigerante-foregroundBlur.png" class="fruit">
+            <img src="img/Morango-refrigerante.png" class="refri">
+        </div>
+
+        <div class="item" style="--background: #2d5643;">
+            <div class="title">AVOCADO</div>
+            <img src="img/Abacate-refrigerante-foregroundBlur.png" class="fruit">
+            <img src="img/Abacate-refrigerante.png" class="refri">
+        </div>
+
+        <div class="item" style="--background: #e7a043;">
+            <div class="title">ORANGE</div>
+            <img src="img/Laranja-refrigerante-foregroundBlur.png" class="fruit">
+            <img src="img/Laranja-refrigerante.png" class="refri" >
+        </div>
+
+        <!-- Então, até o momento oque fizemos:
+             Vamos do inicio do código até aqui, começamos criando a tag <main>, ela representa o conteúdo principal da página, porém devo admitir que ainda assim não entendo muito, assim que terminar será a primeira coisa a estudar..
+            Após isso, criamos as div's com os conteúdos da página em si, colocando uma div dentro de outra com o nome do refrigerante, e duas img, uma com as frutas em png e a outro com o refri em si.
+            Dentro de cada Div criamos uma class, para modificar dentro do CSS, e dentro de cada img, também criamos uma class com os mesmos fins.
+            Depois, fizemos outra div, e dentro dessa div colocamos a tag buttom, que é responsável por criar um botão na tela. Criamos dois.
+
+            **PS: Fizemos uma pequena alteração no código, mais especificamente nas class das div's de item, onde usamos o sufixo active e hidden para representar quem apareça na tela respectivamente, onde quem herdar o active apareça, a sem nd será a proxima e a com hidden será a última (mudaremos quem receberá esse valor pelo JS)**
+
+            Logo após isso linkamos o CSS no Html
+
+            **Explicando o style das div aqui no html: Ela vai funcionar para comunicar o html e css sobre oque fazer quando tal item está aparecendo, e o -- funciona como uma declaração de variavel.
+        
+        -->
+
+        <div class="arrow">
+            <button id="prev"> < </button>
+            <button id="next"> > </button>
+        </div>
+    </main>
+
+</body>
+<script src="./script.js"></script>
+</html>

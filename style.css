@@ -1,0 +1,100 @@
+.item {
+    display: none; /* Essa função faz com que não apareça na tela*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: var(--background);
+
+} 
+
+.item.active{
+    display: block; /* Faz com que quem esteja com a tag ACTIVE seja apresentado na tela*/
+}
+
+.item .title{
+    font-size: 12rem;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-shadow: 0 0 15px #ffffff; /*Efeito neon na palavra*/
+    
+
+/*Essas linhas de código abaixo servem para alinhar qualquer coisa ao centro
+Primeiramente colocamos a tag position: na forma absolute
+Em seguida setamos o top e o left em 50%, porém, eles se baseiam de forma literal no ponto 50%, deixando o item com a borda nesse ponto
+Pra corrigir isso usamos o transform, no formato translate, que move o objeto 50% pra trás e pro lado, centralizando de forma perfeita
+*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.item .fruit {
+    wiDth: 1550px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /*trás p item para frente de todos ou pelo valor de coisas que tem na tela*/
+
+}
+
+.item .refri{
+    z-index: 2;
+    width: 600px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #eee9;
+    border: 1px solid #eee9;
+    color: #eee;
+    font-size: x-large;
+    font-family: monospace;
+    cursor: pointer;
+    z-index: 4;
+    border-radius: 50%;
+}
+
+#prev{
+    left: 30px;
+}
+
+#next{
+    right: 30px;
+}
+
+
+@keyframes toActive {
+     from{
+        top: 100%;
+        opacity: 0;
+     }
+
+}
+
+.item.active img.fruit{
+    animation: toActive 0.7s ease-in-out 1;
+}
+
+.item.active .title{
+    animation: toActive 0.7s ease-in-out 1;
+
+}
+
+
+
